@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Horizon ERP</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="brand-mark">H</div>
+          <div>
+            <strong>Horizon ERP</strong>
+            <span>PT Horizon Nusantara</span>
+          </div>
+        </div>
+        <nav class="module-nav" id="moduleNav" aria-label="Modul ERP"></nav>
+        <div class="sidebar-footer">
+          <span>Environment</span>
+          <strong>Production Preview</strong>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <button class="icon-button mobile-only" id="sidebarToggle" aria-label="Buka menu" title="Menu">
+            <span class="icon-fallback">=</span>
+          </button>
+          <label class="global-search" for="globalSearch">
+            <span id="searchIcon"></span>
+            <input id="globalSearch" type="search" placeholder="Cari order, pelanggan, SKU, pegawai..." autocomplete="off" />
+          </label>
+          <div class="topbar-actions">
+            <select id="periodSelect" aria-label="Periode">
+              <option value="2026-Q2">Q2 2026</option>
+              <option value="2026-Q1">Q1 2026</option>
+              <option value="2025-Q4">Q4 2025</option>
+            </select>
+            <button class="ghost-button" id="saveDataBtn" type="button"></button>
+            <button class="ghost-button" id="exportDataBtn" type="button"></button>
+            <button class="primary-button" id="newRecordBtn" type="button"></button>
+          </div>
+        </header>
+
+        <section class="content" id="content" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <div id="modalRoot"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
